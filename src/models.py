@@ -48,7 +48,7 @@ class FavoritePlanet(Base):
     # Notice that each column is also a normal Python instance attribute.
     id = Column(Integer, primary_key=True)
     user_id = Column(Integer, ForeignKey('user.id'))
-    character_id = Column(Integer, ForeignKey('character.id'))
+    planet_id = Column(Integer, ForeignKey('planet.id'))
     user = relationship(User)
     character = relationship(Character)
 
